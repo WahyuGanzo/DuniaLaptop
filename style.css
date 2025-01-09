@@ -1,0 +1,437 @@
+/* DASAR */
+
+* {
+    background-color: #fefeff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "OpenSans", sans-serif;
+}
+
+.atas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #02790e;
+    padding: 10px;
+}
+
+.welcome, .carabelanja a {
+    background-color: #02790e;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+}
+
+.logodansearchbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    color: #02790e;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.20);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transform: scale(1.20);
+    -moz-transform: scale(1.20);
+    -ms-transform: scale(1.20);
+    -o-transform: scale(1.20);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+
+
+.shopCategorytitle {
+    background-color: #1aaa38; /* Warna hijau */
+    color: white; /* Warna teks */
+    font-size: 24px; /* Ukuran teks */
+    padding: 10px 30px; /* Padding untuk spasi di dalam background */
+    display: inline-block; /* Agar lebar background mengikuti teks */
+    border-top-left-radius: 50px; /* Membentuk sudut kiri atas */
+    border-bottom-right-radius: 50px; /* Membentuk sudut kanan bawah */
+    margin-bottom: 20px; /* Spasi di bawah judul */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+@keyframes getar {
+    0% { transform: scale(1); -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); }
+    10% { transform: scale(1.1); -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); }
+    20% { transform: scale(1); -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); }
+    30% { transform: scale(1.1); -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); }
+    100% { transform: scale(1); -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); }
+}
+
+#kategori {
+    display: block;
+    padding: 10px;
+    justify-content: space-around;
+    max-width: 1000px; /* Ganti fixed width menjadi max-width */
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    margin: 10px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.tombolkategori {
+    display: flex;
+    flex-wrap: wrap; /* Agar kategori tersusun rapi jika lebar tidak mencukupi */
+    justify-content: space-around;
+    margin: auto;
+    gap: 10px; /* Menambahkan jarak antar elemen */
+}
+
+.cardKategori {
+    display: flex;
+    flex-direction: column; /* Agar konten vertikal */
+    align-items: center;    /* Memastikan gambar dan teks di tengah */
+    justify-content: center;
+    text-align: center;     /* Agar teks berada di tengah */
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.cardKategori img {
+    width: 50px;
+    margin-bottom: 10px;    /* Jarak antara gambar dan teks */
+}
+
+.cardKategori p {
+    font-weight: bold;
+    margin: 0;              /* Hilangkan margin default */
+}
+
+
+.cardKategori:hover {
+    animation: denyut 1s infinite;
+    cursor: pointer;
+    color: #00ff00;
+}
+
+@keyframes denyut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries untuk perangkat lebih kecil */
+@media (max-width: 600px) {
+    .cardKategori {
+        flex: 1 1 80px; /* Ukuran lebih kecil di layar sempit */
+    }
+
+    .cardKategori img {
+        width: 50px;
+    }
+}
+
+
+
+/* Hide all images by default */
+.mySlides {
+    display: none;
+}
+
+/* The image container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a background color to the buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #00ff00;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+#asus {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto 20px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    background-color: #D3D3D3;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.kontenAsus {
+    display: flex;
+    background-color: transparent;
+}
+
+.asusLogo {
+    margin: auto;
+    background-color: transparent;
+    display: flex;
+}
+
+.asusLogo img {
+    width: 300px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 18%;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .product-details .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+  }
+  
+  .discount {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+  
+  .current-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .product-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .product-buttons button:nth-child(2) {
+    background-color: #ff5722;
+  }
+
+  .product-card:hover {
+    cursor: pointer;
+    border: solid 2px #00ff00;
+  }
+
+  .product-buttons button:hover {
+    background-color: #ff5722;
+  }
+
+  #lenovo {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto 20px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    background-color: #ffffe0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.kontenLenovo {
+    display: flex;
+    background-color: transparent;
+}
+
+.lenovoLogo {
+    margin: auto;
+    background-color: transparent;
+    display: flex;
+}
+
+.lenovoLogo img {
+    width: 300px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .atas {
+        justify-content: space-betweenx;
+    }
+
+    .atas p, .carabelanja a {
+        font-size: 0.7rem;
+        margin: auto;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .search-bar input {
+        width: 50px;
+    }
+}
