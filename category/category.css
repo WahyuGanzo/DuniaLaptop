@@ -1,3 +1,4 @@
+
 * {
     background-color: #fefeff;
     padding: 0;
@@ -31,6 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 
 nav {
     display: flex;
@@ -99,6 +101,100 @@ nav {
     border: 0;
 }
 
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    flex: 1 1 calc(20% - 20px); /* 5 card per row */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 200px;
+}
+
+/* Ukuran Gambar Persegi */
+.product-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Membuat gambar berbentuk persegi */
+    object-fit: cover; /* Menjaga gambar tetap proporsional dan terisi penuh */
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebc54;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Media Query */
+@media (max-width: 1200px) {
+    .product-card {
+        flex: 1 1 calc(25% - 20px); /* 4 card per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .product-card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 card per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px); /* 2 card per row */
+    }
+}
+
+@media (max-width: 400px) {
+    .product-card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
+
+
+
 footer, footer p {
     text-align: center;
     width: 100%;
@@ -108,66 +204,32 @@ footer, footer p {
     color: #fefefe;
 }
 
-/* Styling untuk hasil pencarian */
-#search-results {
-    margin: 20px;
-}
+@media (max-width: 768px) {
+    .atas {
+        justify-content: space-betweenx;
+    }
 
-#search-results h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
+    .atas p, .alamatKami a {
+        font-size: 0.7rem;
+        margin: auto;
+    }
 
-.product-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    width: 200px;
-    display: inline-block;
-}
+    .logo {
+        width: 90px;
+    }
 
-.product-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    border: solid 1px #02790e;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-}
+    .search-bar {
+        display: none;
+    }
 
-.product-item img {
-    width: 100%;
-    height: auto;
-}
+    nav {
+        justify-content: center;
+        position: relative;
+    }
 
-.product-item h3 {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
-.product-item p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.product-item a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #02790e;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.product-item a:hover {
-    background-color: #025b0c;
+    .logo {
+        margin-right: auto;
+    }
 }
 
 #pasangCCTV {

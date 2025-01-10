@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunia Laptop</title>
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+    <!-- WELCOMING -->
+    <div class="atas">
+        <p class="welcome">Welcome to Dunia Laptop - Buka Setiap Hari, 10.00-21.00 WIB</p>
+        <div class="alamatKami">
+            <a href="https://maps.app.goo.gl/ycbAUCisp2QmQFsM9">Alamat Kami</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../asset/logodunialaptop.png" alt="Dunia Laptop Logo" onclick="window.location.href='../index.html'">
+            </div>
+            <form class="search-bar" onsubmit="searchProduct(event)">
+                <label for="search" class="visually-hidden">Cari Laptop / PC</label>
+                <input type="text" id="search" name="query" placeholder="Cari Laptop / PC">
+                <button type="submit">
+                    <img src="../asset/search-icon.png" alt="Search Icon">
+                </button>
+            </form>
+            
+        </nav>
+    </header>
+    
+    <script>
+        function searchProduct(event) {
+            event.preventDefault(); // Mencegah form submit secara default
+    
+            const query = document.getElementById('search').value.trim(); // Mengambil nilai input dari search bar dan menghapus spasi ekstra
+    
+            if (query) {
+                // Redirect ke halaman hasil pencarian dengan query sebagai parameter
+                window.location.href = `../search-results.html?query=${encodeURIComponent(query)}`; 
+            } else {
+                alert('Masukkan kata kunci pencarian!'); // Validasi jika input kosong
+            }
+        }
+    </script>
+
+<h1 class="judulKategori" style="text-align: center; color: #02790e; font-family: sans-serif; padding-bottom: 20px;">PRINTER</h1>
+<section class="product-container">
+    
+    <div class="product-card">
+        <img src="" alt="Laptop 1">
+        <h3>AREA NAMA PRODUK</h3>
+        <p>Rpx.xxx.xxx</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Laptop%201" class="whatsapp-btn" target="_blank">
+            <img src="../asset/whatsapp.png" alt="WhatsApp Icon"> Beli di WhatsApp
+        </a>
+    </div>
+
+    <div class="product-card">
+        <img src="../asset/laptop2.jpg" alt="Laptop 2">
+        <h3>AREA NAMA PRODUK</h3>
+        <p>Rpx.xxx.xxx</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Laptop%202" class="whatsapp-btn" target="_blank">
+            <img src="../asset/whatsapp.png" alt="WhatsApp Icon"> Beli di WhatsApp
+        </a>
+    </div>
+
+    <div class="product-card">
+        <img src="../asset/laptop3.jpg" alt="Laptop 3">
+        <h3>AREA NAMA PRODUK</h3>
+        <p>Rpx.xxx.xxx</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Laptop%203" class="whatsapp-btn" target="_blank">
+            <img src="../asset/whatsapp.png" alt="WhatsApp Icon"> Beli di WhatsApp
+        </a>
+    </div>
+
+    <div class="product-card">
+        <img src="../asset/laptop4.jpg" alt="Laptop 4">
+        <h3>AREA NAMA PRODUK</h3>
+        <p>Rpx.xxx.xxx</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Laptop%204" class="whatsapp-btn" target="_blank">
+            <img src="../asset/whatsapp.png" alt="WhatsApp Icon"> Beli di WhatsApp
+        </a>
+    </div>
+
+    <div class="product-card">
+        <img src="../asset/laptop5.jpg" alt="Laptop 5">
+        <h3>AREA NAMA PRODUK</h3>
+        <p>Rpx.xxx.xxx</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20membeli%20Laptop%205" class="whatsapp-btn" target="_blank">
+            <img src="../asset/whatsapp.png" alt="WhatsApp Icon"> Beli di WhatsApp
+        </a>
+    </div>
+</section>
+<section id="pasangCCTV">
+    <img src="../asset/banner/JASA PASANG CCTV - DUNIA LAPTOP.png" alt="Banner CCTV" class="bannerCCTV" onclick="window.location.href='#'">
+</section>
+
+<footer>
+    <p>&copy; 2025 PT. COMPUTER ADE RA. Semua hak cipta dilindungi</p>
+    <P>Designed and Developed by Ganzo Studio</P>
+</footer>
+    <script src="../script.js"></script>
+</body>
+</html>
