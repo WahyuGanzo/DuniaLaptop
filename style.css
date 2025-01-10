@@ -233,7 +233,7 @@ nav {
 
 /* On hover, add a background color to the buttons */
 .prev:hover, .next:hover {
-    background-color:orangered;
+    background-color:#02790e;
 }
 
 /* Caption text */

@@ -37,6 +37,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     padding: 10px 20px;
+    border: solid 1px black;
 }
 
 .logo {
@@ -127,6 +128,20 @@ footer, footer p {
     display: inline-block;
 }
 
+.product-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: solid 1px #02790e;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
 .product-item img {
     width: 100%;
     height: auto;
@@ -156,3 +171,36 @@ footer, footer p {
     background-color: #025b0c;
 }
 
+#pasangCCTV {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+}
+
+#pasangCCTV img {
+    max-width: 1200px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#pasangCCTV img:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.03);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}

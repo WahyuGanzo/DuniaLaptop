@@ -2,17 +2,87 @@
 const products = [
     {
         id: 1,
-        name: "asus",
-        price: 15000000,
-        image: "path-to-laptop1.jpg",
-        whatsapp: "628123456789"
+        name: "ASUS VIVOBOOK GO 14 FLIP",
+        price: 6895000,
+        image: "asset/LAPTOP/ASUS/1.png",
+        whatsapp: "6282325909390"
     },
     {
         id: 2,
-        name: "lenovo",
-        price: 10000000,
-        image: "path-to-pc1.jpg",
-        whatsapp: "628123456789"
+        name: "ASUS VIVOBOOK GO 14",
+        price: 5865000,
+        image: "asset/LAPTOP/ASUS/3.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 3,
+        name: "ASUS VIVOBOOK 14",
+        price: 8195000,
+        image: "asset/LAPTOP/ASUS/4.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 4,
+        name: "LENOVO IP-3-CXID",
+        price: 6145000,
+        image: "asset/LAPTOP/LENOVO/10.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 5,
+        name: "LENOVO IP 3-07ID (CI5)",
+        price: 7895000,
+        image: "asset/LAPTOP/LENOVO/11.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 6,
+        name: "LENOVO IP 5-9PID",
+        price: 13345000,
+        image: "asset/LAPTOP/LENOVO/12.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 7,
+        name: "Axioo Mybook Hype 1",
+        price: 2400000,
+        image: "asset/LAPTOP/AXIOO/4.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 8,
+        name: "Axioo Mybook Hype 5 G12",
+        price: 6400000,
+        image: "asset/LAPTOP/AXIOO/5.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 9,
+        name: "Axioo Mybook Hype JKT48",
+        price: 5650000,
+        image: "asset/LAPTOP/AXIOO/6.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 10,
+        name: "MSI CYBORG 15-A13VEK.844",
+        price: 15000000,
+        image: "asset/LAPTOP/MSI/7.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 11,
+        name: "MSI MODERN 14-C120MO.1058",
+        price: 5600000,
+        image: "asset/LAPTOP/MSI/8.png",
+        whatsapp: "6282325909390    "
+    },
+    {
+        id: 10,
+        name: "MSI THIN 15-B13UCX.2410",
+        price: 9850000,
+        image: "asset/LAPTOP/MSI/9.png",
+        whatsapp: "6282325909390    "
     },
     // Tambahkan lebih banyak produk sesuai kebutuhan
 ];
