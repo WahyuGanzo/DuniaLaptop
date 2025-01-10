@@ -645,7 +645,16 @@ footer, footer p {
         width: 90px;
     }
 
-    .search-bar input {
-        width: 50px;
+    .search-bar {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        margin-right: auto;
     }
 }
