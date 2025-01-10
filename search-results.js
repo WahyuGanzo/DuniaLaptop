@@ -1,37 +1,71 @@
-const allProducts = [
-    {name: 'Asus Laptop A', description: 'Laptop Asus dengan performa tinggi', id: 1, brand: 'Asus', image: 'asset/asus-laptop.jpg', price: 'Rp 10.000.000'},
-    {name: 'Asus Laptop B', description: 'Laptop Asus untuk keperluan bisnis', id: 2, brand: 'Asus', image: 'asset/asus-laptop-b.jpg', price: 'Rp 12.500.000'},
-    {name: 'Acer Laptop C', description: 'Laptop Acer gaming terbaik', id: 3, brand: 'Acer', image: 'asset/acer-laptop.jpg', price: 'Rp 9.500.000'},
-    {name: 'Dell Inspiron', description: 'Laptop Dell untuk keperluan sehari-hari', id: 4, brand: 'Dell', image: 'asset/dell-laptop.jpg', price: 'Rp 8.000.000'},
-    {name: 'Lenovo ThinkPad', description: 'Laptop Lenovo dengan ketahanan tinggi', id: 5, brand: 'Lenovo', image: 'asset/lenovo-laptop.jpg', price: 'Rp 11.000.000'}
+// Contoh data produk
+const products = [
+    {
+        id: 1,
+        name: "asus",
+        price: 15000000,
+        image: "path-to-laptop1.jpg",
+        whatsapp: "628123456789"
+    },
+    {
+        id: 2,
+        name: "lenovo",
+        price: 10000000,
+        image: "path-to-pc1.jpg",
+        whatsapp: "628123456789"
+    },
+    // Tambahkan lebih banyak produk sesuai kebutuhan
 ];
 
-// Fungsi untuk membuat card produk
-function displayProducts(products) {
-    const container = document.getElementById('products-container');
-    
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
-        
-        // Menambahkan gambar, nama, deskripsi, harga ke dalam card
-        productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="product-image">
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <p class="price">${product.price}</p>
-            </div>
-        `;
-        
-        // Menambahkan event onclick untuk mengarahkan ke halaman spesifik merk
-        productCard.onclick = function() {
-            window.location.href = `${product.brand.toLowerCase()}.html`; // Mengarahkan ke halaman sesuai merk
-        };
-
-        container.appendChild(productCard);
-    });
+// Fungsi untuk mendapatkan parameter query dari URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
 }
 
-// Memanggil fungsi untuk menampilkan produk
-displayProducts(allProducts);
+// Menampilkan hasil pencarian di halaman hasil
+function displaySearchResults() {
+    const query = getQueryParam('query'); // Ambil kata kunci dari URL
+    const searchQuery = document.getElementById('search-query');
+    const productList = document.getElementById('product-list');
+    
+    if (query) {
+        searchQuery.textContent = query; // Menampilkan kata kunci di judul
+        const results = products.filter(product => product.name.toLowerCase().includes(query.toLowerCase()));
+        
+        if (results.length > 0) {
+            productList.innerHTML = ''; // Kosongkan daftar produk
+            results.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product-item');
+                
+                productDiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>Harga: Rp${product.price.toLocaleString()}</p>
+                    <a href="https://wa.me/${product.whatsapp}" target="_blank">Hubungi via WhatsApp</a>
+                `;
+                productList.appendChild(productDiv);
+            });
+        } else {
+            productList.innerHTML = '<p>Tidak ada produk yang sesuai dengan pencarian Anda.</p>';
+        }
+    } else {
+        productList.innerHTML = '<p>Tidak ada kata kunci pencarian yang diberikan.</p>';
+    }
+}
+
+// Panggil fungsi untuk menampilkan hasil pencarian saat halaman dimuat
+document.addEventListener('DOMContentLoaded', displaySearchResults);
+
+// Fungsi search yang sama seperti di halaman utama
+function searchProduct(event) {
+    event.preventDefault(); // Mencegah form submit secara default
+    const query = document.getElementById('search').value.trim(); // Ambil nilai input
+
+    if (query) {
+        window.location.href = `search-results.html?query=${encodeURIComponent(query)}`; 
+    } else {
+        alert('Masukkan kata kunci pencarian!'); // Validasi input kosong
+    }
+}
