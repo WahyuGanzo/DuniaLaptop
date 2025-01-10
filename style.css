@@ -19,7 +19,7 @@ body {
     padding: 10px;
 }
 
-.welcome, .carabelanja a {
+.welcome, .alamatKami a {
     background-color: #02790e;
     color: white;
     font-size: 0.8rem;
@@ -34,9 +34,6 @@ body {
     align-items: center;
 }
 
-.fa-bars {
-    color: #02790e;
-}
 
 nav {
     display: flex;
@@ -94,6 +91,18 @@ nav {
     height: 20px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
 
 .shopCategorytitle {
     background-color: #1aaa38; /* Warna hijau */
@@ -121,10 +130,11 @@ nav {
     justify-content: space-around;
     max-width: 1000px; /* Ganti fixed width menjadi max-width */
     width: 100%;
-    border-radius: 10px;
     align-items: center;
     margin: 10px auto;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .tombolkategori {
@@ -223,7 +233,7 @@ nav {
 
 /* On hover, add a background color to the buttons */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color:orangered;
 }
 
 /* Caption text */
@@ -298,20 +308,55 @@ nav {
     background-color: transparent;
 }
 
+.asusLogo img:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
 .product-grid {
     display: flex;
+    flex-wrap: wrap; /* Membuat produk otomatis berpindah ke baris berikutnya */
     justify-content: space-between;
     margin-top: 20px;
     gap: 10px;
-  }
-  
-  .product-card {
+    background-color: transparent;
+}
+
+.product-card {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 10px;
-    width: 18%;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-  }
+    width: calc(20% - 10px); /* Menyesuaikan lebar kartu produk agar maksimal 5 item per baris */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1200px) {
+    .product-card {
+        width: calc(33.33% - 10px); /* Pada ukuran layar yang lebih kecil, tampilkan 3 item per baris */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .product-card {
+        width: calc(50% - 10px); /* Pada layar tablet, tampilkan 2 item per baris */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .product-card {
+        width: 100%; /* Pada layar ponsel, tampilkan 1 item per baris */
+    }
+}
+
   
   .product-image img {
     max-width: 100%;
@@ -370,11 +415,28 @@ nav {
 
   .product-card:hover {
     cursor: pointer;
-    border: solid 2px #00ff00;
-  }
+    border: solid 1px #00ff00;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
 
   .product-buttons button:hover {
     background-color: #ff5722;
+  }
+
+  .klikBrandLogo {
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
   }
 
   #lenovo {
@@ -411,9 +473,232 @@ nav {
     background-color: transparent;
 }
 
+.lenovoLogo img:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+#axioo {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto 20px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    background-color: azure;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.kontenAxioo {
+    display: flex;
+    background-color: transparent;
+}
+
+.axiooLogo {
+    margin: auto;
+    background-color: transparent;
+    display: flex;
+}
+
+.axiooLogo img {
+    width: 300px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.axiooLogo img:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
 
 
+#msi {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto 20px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    background-color: #bbb;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
+.kontenMsi {
+    display: flex;
+    background-color: transparent;
+}
+
+.msiLogo {
+    margin: auto;
+    background-color: transparent;
+    display: flex;
+}
+
+.msiLogo img {
+    width: 300px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.msiLogo img:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+#pasangCCTV {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+}
+
+#pasangCCTV img {
+    max-width: 1200px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#pasangCCTV img:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+footer, footer p {
+    text-align: center;
+    width: 100%;
+    background-color: #02790e;
+    font-family: "OpenSans", sans-serif;
+    padding: 3px;
+    color: #fefefe;
+}
+
+/* Konten Utama */
+#search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Setiap produk */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk produk */
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Judul produk */
+.product h2 {
+    font-size: 1.5rem;
+    color: #02790e;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Deskripsi produk */
+.product p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Jika tidak ada hasil pencarian */
+.no-results {
+    font-size: 1.2rem;
+    color: #02790e;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Tombol Back to Search */
+.back-to-search {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #02790e;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-search:hover {
+    background-color: #03590e;
+}
 
 
 
@@ -422,7 +707,7 @@ nav {
         justify-content: space-betweenx;
     }
 
-    .atas p, .carabelanja a {
+    .atas p, .alamatKami a {
         font-size: 0.7rem;
         margin: auto;
     }
