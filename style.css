@@ -357,6 +357,14 @@ nav {
     }
 }
 
+/* Untuk tampilan di layar mobile (maksimal lebar 600px) */
+@media screen and (max-width: 600px) {
+    .product-card {
+        width: calc(33.33% - 10px); /* Menampilkan 3 item per baris */
+    }
+}
+
+
   
   .product-image img {
     max-width: 100%;
