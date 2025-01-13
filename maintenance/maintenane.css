@@ -1,0 +1,211 @@
+
+* {
+    background-color: #fefeff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "OpenSans", sans-serif;
+}
+
+.atas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #02790e;
+    padding: 10px;
+}
+
+.welcome, .alamatKami a {
+    background-color: #02790e;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+}
+
+.logodansearchbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.20);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transform: scale(1.20);
+    -moz-transform: scale(1.20);
+    -ms-transform: scale(1.20);
+    -o-transform: scale(1.20);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.maintenance-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.maintenance-img {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.maintenance-section h1, p {
+    padding: 20px;
+}
+
+.back-btn {
+    background-color: #02790e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background-color: #025f0b;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+footer, footer p {
+    text-align: center;
+    width: 100%;
+    background-color: #02790e;
+    font-family: "OpenSans", sans-serif;
+    padding: 3px;
+    color: #fefefe;
+}
+
+@media (max-width: 768px) {
+    .atas {
+        justify-content: space-betweenx;
+    }
+
+    .atas p, .alamatKami a {
+        font-size: 0.7rem;
+        margin: auto;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+}
+
+#pasangCCTV {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+}
+
+#pasangCCTV img {
+    max-width: 1200px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#pasangCCTV img:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.03);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
