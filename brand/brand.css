@@ -281,3 +281,16 @@ footer, footer p {
     max-width: 300px;
     width: 100%;
 }
+
+@media (max-width: 600px) {
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product-card {
+        flex: 1 1 calc(50% - 10px); /* Set 2 card per row */
+        margin-bottom: 20px; /* Tambahan jarak antar baris card */
+    }
+}
